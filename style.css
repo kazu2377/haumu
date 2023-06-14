@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/*
+*{
+    margin: 0;
+    padding: 0;
+}*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "メイリオ",Meiryo;
+    font-size: 14px;
+    color: #595758;
+    background-color: rgb(223, 220, 216);
+    min-width: 900px;
+}
+
+.page-header{
+    background-color: white;
+    border-top: 3px solid rgb(0, 0, 0);
+}
+
+h1{
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1 a{
+    color: #555;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 900;
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+h1 a:hover{
+    color: #0589f5;
+}
+
+
+nav{
+    background-color: antiquewhite;
+    margin: 30px 0 0 0;
+}
+
+nav ul{
+    width: 900px;
+    margin: 0 0 0 auto;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    color: #555;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    display: block;
+    margin: 15px 30px 15px 0;
+}
+
+nav ul li a:hover{
+    color: #0589f5;
+}
+
+div .question {
+	margin: 50px auto;
+	width: 900px;
+}
+
+section{
+    text-align: center;
+}
+
+/**************************************
+***************footer*****************
+***************************************/
+
+footer {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    padding: 50px 0;
+    background-color: antiquewhite;
+}
+
+
+/**************************************
+***************slider*****************
+***************************************/
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+     width:100%;/*スライダー内の画像を横幅100%に*/
+     height: 11vw;
+}
+
+ /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+     margin:0 10px;
+}
+
+ /*矢印の設定*/
+
+ /*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+     position: absolute;/*絶対配置にする*/
+     top: 42%;
+     cursor: pointer;/*マウスカーソルを指マークに*/
+     outline: none;/*クリックをしたら出てくる枠線を消す*/
+     border-top: 2px solid #666;/*矢印の色*/
+     border-right: 2px solid #666;/*矢印の色*/
+     height: 15px;
+     width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+     left: -1.5%;
+     transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+     right: -1.5%;
+     transform: rotate(45deg);
+}
+
+ /*ドットナビゲーションの設定*/
+
+.slick-dots {
+     text-align:center;
+     margin:20px 0 0 0;
+}
+
+.slick-dots li {
+     display:inline-block;
+     margin:0 5px;
+}
+
+.slick-dots button {
+     color: transparent;
+     outline: none;
+     width:8px;/*ドットボタンのサイズ*/
+     height:8px;/*ドットボタンのサイズ*/
+     display:block;
+     border-radius:50%;
+     background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+     background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/**************************************
+***************utility*****************
+***************************************/
+
+.u-content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.u-heading {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.u-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background: #2b2b2b;
+    transform: translateX(-50%);
+}
+
+.u-text {
+    padding-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+}
+
+/**************************************
+***************conceptはじめに*****************
+***************************************/
+.concept {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.concept__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/**************************************
+***************problemハムスターの疑問あれこれ*****************
+***************************************/
+
+.problem {
+    width: 100%;
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+.problem__contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 980px;
+}
+.problem__content {
+    width: 420px;
+    /*padding-bottom: 80px;*/
+    text-align: left;
+    line-height: 1.8;
+}
+.problem__content:nth-of-type(1) {
+    order: 1;
+}
+.problem__content:nth-of-type(2) {
+    order: 3;
+}
+.problem__content:nth-of-type(3) {
+    order: 2;
+}
+.problem__content:nth-of-type(4) {
+    order: 4;
+    margin-top: 35px;
+}
+
+.problem__content__image {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.problem__content__heading {
+    font-size: 24px;
+}
+.problem__content__text {
+    letter-spacing: 1.5px;
+}
+
+/**************************************
+***************columnコラム*****************
+***************************************/
+.column {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.slider li img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/**************************************
+***************SNS*****************
+***************************************/
+
+.SNS {
+    width: 100%;
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+.SNS__contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 1100px;
+}
+
+.SNS__content {
+    width: 420px;
+    height: 500px;
+    padding-bottom: 80px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.SNS__content:nth-of-type(1) {
+    order: 1;
+}
+
+.SNS__content:nth-of-type(2) {
+    order: 2;
+    /*margin-top: 32px;*/
+}
+
+.SNS__content:nth-of-type(3) {
+    order: 3;
+}
+
+/*
+.SNS__content:nth-of-type(4) {order: 4;}
+*/
+
+.SNS__content__video {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/**************************************
+***************video*****************
+***************************************/
+
+video {
+    width: 100%;
+    height: 500px;
+    max-width: 800px;
+    display: block;
+    margin: auto;
+}
+
+
+/**************************************
+***************contactお問い合わせ*****************
+***************************************/
+
+form{
+    width: 900px;
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto 60px;
+}
+
+legend{
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    color: #a07500;
+}
+
+label{
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 0 5px 0;
+}
+
+form input, form textarea{
+    padding: 10px;
+    margin: 2px 0 20px;
+    border: 1px solid rgb(189, 189, 189);
+    width: 800px;
+    font-size: 13px;
+}
+
+fieldset{
+    margin: 0 0 30px 0;
+    border: 0;
+    border-bottom: 2px solid rgb(199, 198, 196);
+    padding: 0 0 30px 0;
+}
+
+.button{
+    background-color: #8d7020;
+    color: white;
+    border: none;
+    width: 400px;
+    padding: 10px 0;
+    margin: 0 0 20px 0;
+    border-radius: 6px;
+    font-weight: 900;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.button:hover{
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 3px #5e4a16;
+    top: 1px;
+}
+
+.button:active{
+    position: relative;
+    box-shadow: 0 3px #5e4a16;
+    top: -1px;
+}
+
+.button2{
+    background-color: #ffffff;
+    color: #555;
+    width: 400px;
+    padding: 10px 0;
+    margin: 0 0 20px 0;
+    border-radius: 6px;
+    font-weight: 900;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.button2:hover{
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 3px #6e6e6e;
+    top: 1px;
+}
+
+.button2:active{
+    position: relative;
+    box-shadow: 0 3px #6e6e6e;
+    top: -1px;
+}
+
+
+/**************************************
+***************レスポンシブ対応*****************
+***************************************/
+
+
+
+@media (max-width: 670px) {
+
+    body {
+        font-size: 14px;
+        min-width: none;
+    }
+
+    /* * * * * * * *
+    * utility
+    * * * * * * * * */
+
+    .u-content-wrapper {
+      width: calc(100% - 32px);
+      margin: 0 auto;
+    }
+
+    .u-heading {
+      font-size: 28px;
+      padding: 100px;
+    }
+
+    .u-text {
+      text-align: left;
+      padding-bottom: 32px;
+    }
+
+    .u-display__pc {
+      display: none;
+    }
+
+    /* * * * * * * * *
+    * header
+    * * * * * * * * */
+
+    .page-header{
+        width: 100%;
+    }
+
+
+
+}
